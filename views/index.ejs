@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "/public/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+   <h1 class="heading">Quick Share⚡</h1>
+    <form action = "/upload" method = "post" class = "form" enctype="multipart/form-data" >
+        <label for = "file">File:</label>
+        <input type = "file" id = "file" name = "file" required>
+        <label for = "password">Password:</label>
+        <input type = "password" id = "password" name = "password" placeholder="password" >
+        <button type = "submit">Share</button>
+    </form>
+    <% if (locals.fileLink != null){ %>
+        <div class = "share">
+          </p>Share this link to download</p>
+          <a href = "<%= locals.fileLink %>" ><%= locals.fileLink %></a>
+        </div>
+  <% } %>
+  <footer>
+    <p>Made by <a href = "https://www.linkedin.com/in/rahul-yadav-2a4b3b199/">Rahul Yadav</a> and <a href = "https://www.linkedin.com/in/mrjainsachin/">Sachin Jain</a></p>
+    <a href = "https://github.com/itzrahulyadav/college_project_file_sharing" >See code</a>
+  </footer>
+</body>
+</html>
